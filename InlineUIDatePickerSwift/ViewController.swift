@@ -45,12 +45,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         tableView.dataSource = self
         
-        /*
-         Defined first in storyboard, so bring to front so will be over stack view. See notes
-         in tutorial because if you don't want to be flexible to accommodate modifying
-         such that map size adjusts when date pickers open, then table can just be first in
-         the storyboard.
-         */
+
+        // Defined first in storyboard, so bring to front so will be over stack view. See notes
+        // in tutorial because if you don't want to be flexible to accommodate modifying
+        // such that map size adjusts when date pickers open, then table can just be first in
+        // the storyboard.
+
         view.bringSubview(toFront: tableView)
         
         // Sets the date field values
@@ -68,13 +68,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
             // Height set to initial contentSize of table
             dateTableHeightConstraint.constant = tableView.contentSize.height
-            /* Lower the stack view top to bottom of initial table view and it will stay here intentionally
-             This is intentional because I want the tableView to float over the map when date picker is open.
+            // Lower the stack view top to bottom of initial table view and it will stay here intentionally
+            // This is intentional because I want the tableView to float over the map when date picker is open.
              
-             Note: Remove this next line if you want the stack view top to stay with the tableView bottom,
-             and add one Vertical Space constraint between the tableView bottom and stackView top,
-             with a constant of 0. See tutorial for additional details.
-             */
+            // Note: Remove this next line if you want the stack view top to stay with the tableView bottom,
+            // and add one Vertical Space constraint between the tableView bottom and stackView top,
+            // with a constant of 0. See tutorial for additional details.
+
             stackTopConstraint.constant = tableView.contentSize.height
         }
         hasAppeared = true
@@ -131,11 +131,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    /*
-     Change end time date field value if necessary and trigger handling of
-     the time change. In your own app you would define what is in the
-     handleTimeChange method.
-     */
+
+    // Change end time date field value if necessary and trigger handling of
+    // the time change. In your own app you would define what is in the
+    // handleTimeChange method.
+
     @IBAction func dateAction(_ sender: UIDatePicker) {
         
         let parentIndexPath = IndexPath(row: (datePickerIndexPath! as NSIndexPath).row - 1, section: 0)
@@ -181,7 +181,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             else{
                 
                 // Date picker is startDate which means endDate cell is index 2
-                //
                 if((indexPathSelected as NSIndexPath).row == 0)
                 {
                     // There is a date picker, and this is cell 0, so get the 0th field
@@ -216,8 +215,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    /*! Determines if the UITableView has a UIDatePicker in any of its cells.
-     */
+    // Determines if the UITableView has a UIDatePicker in any of its cells.
     func hasInlineDatePicker() -> Bool {
         return datePickerIndexPath != nil
     }
