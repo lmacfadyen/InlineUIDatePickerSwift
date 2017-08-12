@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		114E47DB1F3E5FBB0015E369 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114E47DA1F3E5FBB0015E369 /* MapKit.framework */; };
 		1197B67A1F2B6DC4006DA868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197B6791F2B6DC4006DA868 /* AppDelegate.swift */; };
 		1197B67C1F2B6DC4006DA868 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197B67B1F2B6DC4006DA868 /* ViewController.swift */; };
 		1197B67F1F2B6DC4006DA868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1197B67D1F2B6DC4006DA868 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		114E47DA1F3E5FBB0015E369 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1197B6761F2B6DC4006DA868 /* InlineUIDatePickerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InlineUIDatePickerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1197B6791F2B6DC4006DA868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1197B67B1F2B6DC4006DA868 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +31,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114E47DB1F3E5FBB0015E369 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		114E47D91F3E5FBB0015E369 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				114E47DA1F3E5FBB0015E369 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1197B66D1F2B6DC4006DA868 = {
 			isa = PBXGroup;
 			children = (
 				1197B6781F2B6DC4006DA868 /* InlineUIDatePickerSwift */,
 				1197B6771F2B6DC4006DA868 /* Products */,
+				114E47D91F3E5FBB0015E369 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +110,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = T6TG5W96HH;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -304,6 +321,7 @@
 				1197B68A1F2B6DC4006DA868 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
