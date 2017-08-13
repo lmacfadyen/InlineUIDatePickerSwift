@@ -72,8 +72,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // This is intentional because I want the tableView to float over the map when date picker is open.
              
             // Note: Remove this next line if you want the stack view top to stay with the tableView bottom,
-            // and add one Vertical Space constraint between the tableView bottom and stackView top,
-            // with a constant of 0. See tutorial for additional details.
+            // add one Vertical Space constraint between the tableView bottom and stackView top,
+            // with a constant of 0, and get rid of hasAppeared totally. See tutorial for full details.
 
             stackTopConstraint.constant = tableView.contentSize.height
         }
